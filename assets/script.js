@@ -31,6 +31,6 @@ logoutButton.addEventListener('click', () => {
     logoutMessage.innerHTML += '<br><br>[Process completed]';
     }, 2000);
     setTimeout(() => {
-        logoutMessage.innerHTML += '<br><br><span class="comment"># Really nice to meet you<br># 很高兴认识你</span>';
+        logoutMessage.innerHTML += '<br><br><span class="comment"># Really nice to meet you<br># 很高兴认识你 <br># Piacere di conoscerti</span>';
     }, 3000);
 });
