@@ -8,6 +8,7 @@
     <link rel="alternate" hreflang="en" href="https://maao.cc/en/">
     <link rel="alternate" hreflang="zh" href="https://maao.cc/zh/">
     <link rel="alternate" hreflang="it" href="https://maao.cc/it/">
+    <link rel="alternate" hreflang="ja" href="https://maao.cc/jp/">
     <meta name="robots" content="noindex, follow">
 
     <meta property="og:title" content="Here's Mars">
@@ -45,9 +46,7 @@
     </style>
 </head>
 <body>
-    <p>If you are not redirected, <a href="./en/">click here for English Page</a>.</p>
-    <p>Se non sei stato reindirizzato, <a href="./it/">clicca qui per accedere alla pagina in italiano</a>.</p>
-    <p>如果您没有被重定向, <a href="./zh/">点击这里进入中文页面</a>.</p>
+    <div class="redirect"></div>
     <script>
         const userLang = navigator.language || navigator.userLanguage;
         if (userLang.startsWith('en')) {
@@ -56,9 +55,19 @@
             window.location.href = './zh/';
         } else if (userLang.startsWith('it')) {
             window.location.href = './it/';
+        } else if (userLang.startsWith('ja')) {
+            window.location.href = './jp/';
         } else {
             window.location.href = './en/';
         }
+        setTimeout(() => {
+            document.querySelector('.redirect').innerHTML = `
+                <p>If you are not redirected, <a href="./en/">click here for English Page</a>.</p>
+                <p>如果您没有被重定向, <a href="./zh/">点击这里进入中文页面</a>.</p>
+                <p>Se non sei stato reindirizzato, <a href="./it/">clicca qui per accedere alla pagina in italiano</a>.</p>
+                <p>リダイレクトされない場合は、<a href="./jp/">こちらをクリックして日本語ページへ移動してください。</a></p>
+            `;
+        }, 3000);
     </script>
 </body>
 </html>

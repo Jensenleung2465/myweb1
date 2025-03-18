@@ -2,13 +2,13 @@ document.body.addEventListener("click", function (event) {
     const igDialog = document.querySelector(".ig-dialog");
     if (event.target.id === "ig-dialog-open") {
         if (igDialog) {
-            igDialog.open = true; // 打开对话框
+            igDialog.open = true;
         } else {
             console.error("igDialog element not found!");
         }
     } else if (event.target.id === "ig-dialog-close") {
         if (igDialog) {
-            igDialog.open = false; // 关闭对话框
+            igDialog.open = false;
         } else {
             console.error("igDialog element not found!");
         }
@@ -31,6 +31,6 @@ logoutButton.addEventListener('click', () => {
     logoutMessage.innerHTML += '<br><br>[Process completed]';
     }, 2000);
     setTimeout(() => {
-        logoutMessage.innerHTML += '<br><br><span class="comment"># Really nice to meet you<br># 很高兴认识你 <br># Piacere di conoscerti</span>';
+        logoutMessage.innerHTML += '<br><br><span class="comment"># Really nice to meet you<br># 很高兴认识你 <br># Piacere di conoscerti<br># はじめまして、どうぞよろしく</span>';
     }, 3000);
 });
