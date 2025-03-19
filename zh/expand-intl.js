@@ -5,6 +5,9 @@ document.querySelector('#expand-intl').addEventListener('click', function () {
         <span class="comment">--------</span><br>
         <i class="fa-brands fa-discord"></i>Discord: <a href="https://discord.com/users/742704239410675725" target="_blank" class="link">winmemzqwq</a><br>
         <span class="comment">--------</span><br>
+        <i class="fa-brands fa-tiktok"></i>TikTok: 
+        <a href="https://www.tiktok.com/@maaoawa" target="_blank" class="link">@maoawa</a><br>
+        <span class="comment">--------</span><br>
         <i class="fa-brands fa-twitter"></i>Twitter: <span class="comment"># (现在的 <i class="fa-brands fa-x-twitter"></i>)</span><br>
         <a href="https://twitter.com/winmemzqwq" target="_blank" class="link">@winmemzqwq</a><br>
         <span class="comment">--------</span><br>

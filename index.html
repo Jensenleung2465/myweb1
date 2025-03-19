@@ -48,18 +48,30 @@
 <body>
     <div class="redirect"></div>
     <script>
-        const userLang = navigator.language || navigator.userLanguage;
-        if (userLang.startsWith('en')) {
-            window.location.href = './en/';
-        } else if (userLang.startsWith('zh')) {
-            window.location.href = './zh/';
-        } else if (userLang.startsWith('it')) {
-            window.location.href = './it/';
-        } else if (userLang.startsWith('ja')) {
-            window.location.href = './jp/';
-        } else {
-            window.location.href = './en/';
+        const preferredLang = localStorage.getItem('preferredLanguage');
+        const browserLang = (navigator.language || navigator.userLanguage).split('-')[0];
+    
+        function redirectToLanguage(lang) {
+            if (lang === 'en') {
+                window.location.href = './en/';
+            } else if (lang === 'zh') {
+                window.location.href = './zh/';
+            } else if (lang === 'it') {
+                window.location.href = './it/';
+            } else if (lang === 'ja' || lang === 'jp') {
+                window.location.href = './jp/';
+            } else {
+                window.location.href = './en/';
+            }
         }
+    
+        if (preferredLang) {
+            redirectToLanguage(preferredLang);
+        } else {
+            redirectToLanguage(browserLang);
+            localStorage.setItem('preferredLanguage', browserLang);
+        }
+    
         setTimeout(() => {
             document.querySelector('.redirect').innerHTML = `
                 <p>If you are not redirected, <a href="./en/">click here for English Page</a>.</p>

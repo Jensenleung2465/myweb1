@@ -34,3 +34,19 @@ logoutButton.addEventListener('click', () => {
         logoutMessage.innerHTML += '<br><br><span class="comment"># Really nice to meet you<br># 很高兴认识你 <br># Piacere di conoscerti<br># はじめまして、どうぞよろしく</span>';
     }, 3000);
 });
+
+document.getElementById('lang-en').addEventListener('click', () => {
+    localStorage.setItem('preferredLanguage', 'en');
+});
+
+document.getElementById('lang-zh').addEventListener('click', () => {
+    localStorage.setItem('preferredLanguage', 'zh');
+});
+
+document.getElementById('lang-it').addEventListener('click', () => {
+    localStorage.setItem('preferredLanguage', 'it');
+});
+
+document.getElementById('lang-jp').addEventListener('click', () => {
+    localStorage.setItem('preferredLanguage', 'jp');
+});
