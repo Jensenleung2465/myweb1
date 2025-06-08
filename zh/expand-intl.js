@@ -1,7 +1,7 @@
 document.querySelector('#expand-intl').addEventListener('click', function () {
     const content = `
         <span class="comment"># 国际平台<br>--------</span><br>
-        <i class="fa-brands fa-telegram fa-sm"></i>Telegram: <a href="https://t.me/winmemzqwq" target="_blank" class="link">@winmemzqwq</a><br>
+        <i class="fa-brands fa-telegram fa-sm"></i>Telegram: <a href="https://t.me/maoawa" target="_blank" class="link">@maoawa</a><br>
         <span class="comment">--------</span><br>
         <i class="fa-brands fa-discord"></i>Discord: <a href="https://discord.com/users/742704239410675725" target="_blank" class="link">winmemzqwq</a><br>
         <span class="comment">--------</span><br>
